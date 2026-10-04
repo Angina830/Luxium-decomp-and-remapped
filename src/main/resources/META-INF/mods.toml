@@ -1,0 +1,31 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="LICENSE.txt"
+[[mods]]
+modId="luxium"
+version="2.8.0-pre-alpha"
+displayName="Luxium: Let there be light"
+logoFile="logo.png"
+authors="vinlanx"
+description='''
+A performance-focused graphics mod that makes Minecraft look better without turning it into a slideshow.
+'''
+mixinConfigs = ["luxium.mixins.json"]
+
+
+
+[[dependencies.luxium]]
+modId="forge"
+mandatory=true
+versionRange="[47.1.3,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.luxium]]
+modId="embeddium"
+mandatory=true
+versionRange="[0.3.31,0.4)"
+ordering="AFTER"
+side="CLIENT"
+
+

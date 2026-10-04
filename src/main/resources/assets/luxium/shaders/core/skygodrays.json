@@ -1,0 +1,22 @@
+{
+  "vertex": "luxium:skygodrays",
+  "fragment": "luxium:skygodrays",
+  "attributes": ["Position", "UV0"],
+  "samplers": [{"name": "DepthSampler"}, {"name": "CloudOcclusionSampler"}],
+  "uniforms": [
+    {"name": "ModelViewMat", "type": "matrix4x4", "count": 16, "values": [1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1]},
+    {"name": "ProjMat", "type": "matrix4x4", "count": 16, "values": [1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1]},
+    {"name": "SunScreenPos", "type": "float", "count": 2, "values": [0.5, 0.5]},
+    {"name": "LightColor", "type": "float", "count": 3, "values": [1.0, 0.9, 0.7]},
+    {"name": "ScreenFade", "type": "float", "count": 1, "values": [1.0]},
+    {"name": "UseMoonStyle", "type": "float", "count": 1, "values": [0.0]},
+    {"name": "ScreenSize", "type": "float", "count": 2, "values": [1920.0, 1080.0]},
+    {"name": "UseCloudOcclusion", "type": "float", "count": 1, "values": [0.0]},
+    {"name": "RayStrength", "type": "float", "count": 1, "values": [1.0]},
+    {"name": "HaloStrength", "type": "float", "count": 1, "values": [0.25]},
+    {"name": "DiscStrength", "type": "float", "count": 1, "values": [0.08]},
+    {"name": "HaloRadius", "type": "float", "count": 1, "values": [0.14]},
+    {"name": "DiscRadius", "type": "float", "count": 1, "values": [0.018]},
+    {"name": "CenterSuppression", "type": "float", "count": 1, "values": [1.0]}
+  ]
+}

@@ -1,0 +1,100 @@
+Luxium Custom License
+
+Copyright © 2026 Vinlanx. All rights reserved.
+
+Luxium is proprietary software. Except for the permissions expressly granted below, no rights to the Luxium software, source code, shaders, assets, or other copyrighted materials are granted to any third party.
+
+1. Permitted Use
+
+You are permitted to:
+
+* Download and use Luxium for personal use.
+* Include the official, unmodified version of Luxium in modpacks, including monetized or commercial modpacks, provided that:
+
+  * Luxium is properly credited to **Vinlanx**;
+  * a link to an official Luxium download or project page is provided;
+  * Luxium itself is not sold, sublicensed, or presented as your own work;
+  * the Luxium file is not modified or separately redistributed outside the modpack.
+* Create and monetize videos, livestreams, screenshots, reviews, demonstrations, and other media featuring Luxium.
+* Share links to official Luxium download pages.
+* Modify Luxium for your own personal and private use, provided that such modified versions are not distributed or made available to third parties.
+
+2. Redistribution
+
+You may NOT:
+
+* Re-upload, mirror, redistribute, or host Luxium as a standalone download without prior written permission from Vinlanx.
+* Distribute modified versions, forks, ports, unofficial builds, or derivative versions of Luxium without prior written permission.
+* Sell, rent, sublicense, or otherwise commercially distribute Luxium itself.
+* Charge users specifically for access to Luxium or to a modified version of Luxium.
+
+Official mirrors or redistribution channels explicitly approved by Vinlanx are exempt from these restrictions.
+
+3. Source Code and Implementation
+
+Unless prior written permission is obtained from Vinlanx, you may NOT:
+
+* Copy, reuse, adapt, translate, port, redistribute, or incorporate Luxium source code into another project.
+* Copy or reuse Luxium shaders, rendering code, algorithms as expressed in the source code, configuration systems, graphical assets, textures, sounds, or other original implementation materials.
+* Create or distribute derivative works based on substantial portions of Luxium's source code or other copyrighted implementation.
+* Use portions of Luxium's source code or implementation as a template or foundation for another mod, library, or competing project where doing so involves copying or adapting Luxium's copyrighted expression.
+
+Access to or public visibility of Luxium's source code does **not** grant permission to copy, redistribute, modify, incorporate, or create derivative works from that source code.
+
+Nothing in this license restricts rights that cannot legally be restricted under applicable law, including any mandatory exceptions provided by applicable copyright law.
+
+4. Assets
+
+Unless explicitly stated otherwise, all original Luxium assets, including but not limited to:
+
+* textures;
+* shaders;
+* images;
+* icons;
+* sounds;
+* models;
+* animations;
+* configuration artwork; and
+* other media created specifically for Luxium
+
+are Copyright © Vinlanx and may not be extracted, redistributed, sold, modified for redistribution, or reused in another project without prior written permission.
+
+5. Attribution and Branding
+
+Permission to use Luxium does not grant ownership of the **Luxium** name, branding, logos, or other identifying materials.
+
+You may refer to Luxium by name when discussing the mod, creating compatible software, reviewing it, or including it in an authorized modpack.
+
+You may not falsely claim to be the creator, owner, official maintainer, or authorized representative of Luxium.
+
+6. Third-Party Content
+
+Luxium may contain or depend upon third-party software or assets.
+
+Such third-party materials remain the property of their respective copyright holders and are governed by their respective licenses.
+
+This license applies only to material for which Vinlanx owns the applicable rights and does not grant additional rights to third-party content.
+
+Where required, third-party attribution and license information should be provided alongside Luxium or in the project's third-party notices.
+
+7. No Warranty
+
+LUXIUM IS PROVIDED **"AS IS"**, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, COMPATIBILITY, OR RELIABILITY.
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, VINLANX SHALL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR OTHER DAMAGES ARISING FROM THE USE OF OR INABILITY TO USE LUXIUM.
+
+The author is not responsible for unauthorized redistribution, modification, sale, misuse, or other actions performed by third parties.
+
+8. Termination
+
+Any permissions granted by this license automatically terminate if you materially violate its terms.
+
+Upon termination, you must stop distributing or otherwise using Luxium in any manner that depended upon the permissions granted by this license.
+
+Vinlanx reserves the right to pursue appropriate remedies for unauthorized copying, redistribution, or other infringement.
+
+9. Additional Permission
+
+Uses not expressly permitted by this license require prior written permission from Vinlanx.
+
+For licensing requests, redistribution permission, commercial agreements, or other exceptions, contact Vinlanx through an official curseforge/telegram.

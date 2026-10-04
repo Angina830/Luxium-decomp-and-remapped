@@ -1,0 +1,22 @@
+{
+  "vertex": "luxium:tonemap",
+  "fragment": "luxium:tonemap",
+  "attributes": ["Position", "UV0"],
+  "samplers": [{"name": "SceneSampler"}, {"name": "EffectsSampler"}],
+  "uniforms": [
+    {"name": "ModelViewMat", "type": "matrix4x4", "count": 16, "values": [1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1]},
+    {"name": "ProjMat", "type": "matrix4x4", "count": 16, "values": [1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1]},
+    {"name": "CompositeEffects", "type": "int", "count": 1, "values": [0]},
+    {"name": "LsrEnabled", "type": "int", "count": 1, "values": [0]},
+    {"name": "SceneTexelSize", "type": "float", "count": 2, "values": [0.001, 0.001]},
+    {"name": "LsrSharpness", "type": "float", "count": 1, "values": [0.35]},
+    {"name": "TonemapExposure", "type": "float", "count": 1, "values": [-0.1]},
+    {"name": "TonemapContrast", "type": "float", "count": 1, "values": [0.18]},
+    {"name": "TonemapHighlightCompression", "type": "float", "count": 1, "values": [0.65]},
+    {"name": "TonemapShadowDepth", "type": "float", "count": 1, "values": [0.1]},
+    {"name": "TonemapSaturation", "type": "float", "count": 1, "values": [1.0]},
+    {"name": "TonemapVibrance", "type": "float", "count": 1, "values": [0.18]},
+    {"name": "TonemapGamma", "type": "float", "count": 1, "values": [2.2]},
+    {"name": "TonemapStrength", "type": "float", "count": 1, "values": [1.0]}
+  ]
+}

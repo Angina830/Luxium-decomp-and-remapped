@@ -1,0 +1,48 @@
+const float LUXIUM_GRASS_BLADE_HEIGHT = 0.5;
+const float LUXIUM_GRASS_TWO_PI = 6.2831853;
+const float LUXIUM_GRASS_HALF_PI = 1.5707963;
+const float LUXIUM_GRASS_MAX_BEND = 0.263;
+const float LUXIUM_GRASS_K1 = 0.483322;
+const float LUXIUM_GRASS_OMEGA1 = 1.111641;
+const float LUXIUM_GRASS_AMP1 = 0.085;
+const float LUXIUM_GRASS_K2 = 1.047198;
+const float LUXIUM_GRASS_OMEGA2 = 3.560472;
+const float LUXIUM_GRASS_AMP2 = 0.030;
+const float LUXIUM_GRASS_K_GENV = 0.285599;
+const float LUXIUM_GRASS_OM_GENV = 1.427997;
+const float LUXIUM_GRASS_K_GCAR = 0.869980;
+const float LUXIUM_GRASS_OM_GCAR = 4.175904;
+const float LUXIUM_GRASS_AMP_GUST = 0.13;
+const float LUXIUM_GRASS_MICRO_OMEGA = 5.463267;
+const float LUXIUM_GRASS_AMP_MICRO = 0.018;
+const vec2 LUXIUM_GRASS_PHASE_DIR = vec2(0.796084, 0.605186);
+const vec2 LUXIUM_GRASS_WIND_DIR = vec2(1.0, 0.0);
+
+vec3 luxium_grass_wave(vec3 worldPosition, float time, float weight, float phase, float strength, float gustStrength, float bendStrength) {
+    float phi1 = phase * LUXIUM_GRASS_TWO_PI;
+    float t = clamp(weight, 0.0, 1.0);
+    float bendFactor = t * t;
+    float bx = worldPosition.x;
+    float bz = worldPosition.z;
+    float dot1 = bx * LUXIUM_GRASS_PHASE_DIR.x + bz * LUXIUM_GRASS_PHASE_DIR.y;
+    float dot2 = bx * (-LUXIUM_GRASS_PHASE_DIR.y) + bz * LUXIUM_GRASS_PHASE_DIR.x;
+    float phi2 = phi1 * 1.5 + 1.1;
+    float phiG = phi1 * 0.625;
+    float phiM = phi1 * 3.25;
+    float bend1 = sin(LUXIUM_GRASS_K1 * dot1 - LUXIUM_GRASS_OMEGA1 * time + phi1) * LUXIUM_GRASS_AMP1;
+    float bend2 = sin(LUXIUM_GRASS_K2 * dot2 - LUXIUM_GRASS_OMEGA2 * time + phi2) * LUXIUM_GRASS_AMP2;
+    float gustEnv = sin(LUXIUM_GRASS_K_GENV * dot1 - LUXIUM_GRASS_OM_GENV * time + phiG);
+    gustEnv = max(0.0, gustEnv);
+    gustEnv = gustEnv * gustEnv * gustEnv;
+    float gustScale = gustStrength / 0.65;
+    float bend3 = sin(LUXIUM_GRASS_K_GCAR * dot1 - LUXIUM_GRASS_OM_GCAR * time + phi1 + 0.7) * LUXIUM_GRASS_AMP_GUST * gustEnv * gustScale;
+    float bend4 = sin(LUXIUM_GRASS_MICRO_OMEGA * time + phiM) * LUXIUM_GRASS_AMP_MICRO;
+    float totalBend = (bend1 + bend2 + bend3 + bend4) * bendStrength;
+    float theta = clamp(totalBend / LUXIUM_GRASS_MAX_BEND, -1.0, 1.0) * LUXIUM_GRASS_HALF_PI;
+    float sinTheta = sin(theta);
+    float cosTheta = cos(theta);
+    float xDisplace = LUXIUM_GRASS_BLADE_HEIGHT * sinTheta * bendFactor;
+    float yDisplace = LUXIUM_GRASS_BLADE_HEIGHT * (cosTheta - 1.0) * bendFactor;
+    vec2 lateral = LUXIUM_GRASS_WIND_DIR * xDisplace * strength;
+    return vec3(lateral.x, yDisplace * strength, lateral.y);
+}

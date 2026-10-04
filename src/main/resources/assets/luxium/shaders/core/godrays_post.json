@@ -1,0 +1,122 @@
+{
+  "blend": {
+    "func": "add",
+    "srcrgb": "one",
+    "dstrgb": "one"
+  },
+  "vertex": "luxium:godrays_post",
+  "fragment": "luxium:godrays_post",
+  "attributes": [
+    "Position",
+    "UV0"
+  ],
+  "samplers": [
+    {
+      "name": "DepthSampler"
+    },
+    {
+      "name": "LightVolumeSampler"
+    }
+  ],
+  "uniforms": [
+    {
+      "name": "ModelViewMat",
+      "type": "matrix4x4",
+      "count": 16,
+      "values": [
+        1.0, 0.0, 0.0, 0.0,
+        0.0, 1.0, 0.0, 0.0,
+        0.0, 0.0, 1.0, 0.0,
+        0.0, 0.0, 0.0, 1.0
+      ]
+    },
+    {
+      "name": "ProjMat",
+      "type": "matrix4x4",
+      "count": 16,
+      "values": [
+        1.0, 0.0, 0.0, 0.0,
+        0.0, 1.0, 0.0, 0.0,
+        0.0, 0.0, 1.0, 0.0,
+        0.0, 0.0, 0.0, 1.0
+      ]
+    },
+    {
+      "name": "InverseProj",
+      "type": "matrix4x4",
+      "count": 16,
+      "values": [
+        1.0, 0.0, 0.0, 0.0,
+        0.0, 1.0, 0.0, 0.0,
+        0.0, 0.0, 1.0, 0.0,
+        0.0, 0.0, 0.0, 1.0
+      ]
+    },
+    {
+      "name": "CameraPos",
+      "type": "float",
+      "count": 3,
+      "values": [0.0, 0.0, 0.0]
+    },
+    {
+      "name": "CamForward",
+      "type": "float",
+      "count": 3,
+      "values": [0.0, 0.0, 1.0]
+    },
+    {
+      "name": "CamUp",
+      "type": "float",
+      "count": 3,
+      "values": [0.0, 1.0, 0.0]
+    },
+    {
+      "name": "CamRight",
+      "type": "float",
+      "count": 3,
+      "values": [1.0, 0.0, 0.0]
+    },
+    {
+      "name": "VolumeMin",
+      "type": "float",
+      "count": 3,
+      "values": [0.0, 0.0, 0.0]
+    },
+    {
+      "name": "VolumeSize",
+      "type": "float",
+      "count": 3,
+      "values": [48.0, 32.0, 48.0]
+    },
+    {
+      "name": "VolumeDim",
+      "type": "float",
+      "count": 3,
+      "values": [48.0, 32.0, 48.0]
+    },
+    {
+      "name": "RayColor",
+      "type": "float",
+      "count": 3,
+      "values": [0.82, 0.92, 1.0]
+    },
+    {
+      "name": "GameTime",
+      "type": "float",
+      "count": 1,
+      "values": [0.0]
+    },
+    {
+      "name": "EffectStrength",
+      "type": "float",
+      "count": 1,
+      "values": [1.0]
+    },
+    {
+      "name": "ScreenSize",
+      "type": "float",
+      "count": 2,
+      "values": [1920.0, 1080.0]
+    }
+  ]
+}

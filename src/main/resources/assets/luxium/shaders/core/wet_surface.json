@@ -1,0 +1,372 @@
+{
+  "blend": {
+    "func": "add",
+    "srcrgb": "one",
+    "dstrgb": "zero"
+  },
+  "vertex": "luxium:wet_surface",
+  "fragment": "luxium:wet_surface",
+  "attributes": [
+    "Position",
+    "UV0"
+  ],
+  "samplers": [
+    {
+      "name": "SceneSampler"
+    },
+    {
+      "name": "DepthSampler"
+    },
+    {
+      "name": "TerrainDepthSampler"
+    },
+    {
+      "name": "MicroNormalSampler"
+    }
+  ],
+  "uniforms": [
+    {
+      "name": "ModelViewMat",
+      "type": "matrix4x4",
+      "count": 16,
+      "values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "ProjMat",
+      "type": "matrix4x4",
+      "count": 16,
+      "values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "ViewProj",
+      "type": "matrix4x4",
+      "count": 16,
+      "values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "InvViewProj",
+      "type": "matrix4x4",
+      "count": 16,
+      "values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "CameraPos",
+      "type": "float",
+      "count": 3,
+      "values": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "ScreenSize",
+      "type": "float",
+      "count": 2,
+      "values": [
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Time",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0
+      ]
+    },
+    {
+      "name": "MaxVirtualDepth",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.195
+      ]
+    },
+    {
+      "name": "DepthCurve",
+      "type": "float",
+      "count": 1,
+      "values": [
+        2.95
+      ]
+    },
+    {
+      "name": "WetDarkening",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.52
+      ]
+    },
+    {
+      "name": "SurfaceOpacity",
+      "type": "float",
+      "count": 1,
+      "values": [
+        1.0
+      ]
+    },
+    {
+      "name": "EdgeSoftness",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.51
+      ]
+    },
+    {
+      "name": "WaveStrength",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.05
+      ]
+    },
+    {
+      "name": "WaveScale",
+      "type": "float",
+      "count": 1,
+      "values": [
+        9.15
+      ]
+    },
+    {
+      "name": "WaveSpeed",
+      "type": "float",
+      "count": 1,
+      "values": [
+        1.64
+      ]
+    },
+    {
+      "name": "RippleStrength",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.46
+      ]
+    },
+    {
+      "name": "RefractionStrength",
+      "type": "float",
+      "count": 1,
+      "values": [
+        2.63
+      ]
+    },
+    {
+      "name": "SsrEnabled",
+      "type": "int",
+      "count": 1,
+      "values": [
+        1
+      ]
+    },
+    {
+      "name": "SsrSteps",
+      "type": "int",
+      "count": 1,
+      "values": [
+        11
+      ]
+    },
+    {
+      "name": "SsrRefinementSteps",
+      "type": "int",
+      "count": 1,
+      "values": [
+        1
+      ]
+    },
+    {
+      "name": "SsrMaxDistance",
+      "type": "float",
+      "count": 1,
+      "values": [
+        45
+      ]
+    },
+    {
+      "name": "SsrThickness",
+      "type": "float",
+      "count": 1,
+      "values": [
+        2.0
+      ]
+    },
+    {
+      "name": "SsrEdgeFade",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.19
+      ]
+    },
+    {
+      "name": "SsrStrength",
+      "type": "float",
+      "count": 1,
+      "values": [
+        1.03
+      ]
+    },
+    {
+      "name": "CelestialDirection",
+      "type": "float",
+      "count": 3,
+      "values": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "CelestialColor",
+      "type": "float",
+      "count": 3,
+      "values": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "SkyAmbientColor",
+      "type": "float",
+      "count": 3,
+      "values": [
+        0.75,
+        0.82,
+        1.0
+      ]
+    },
+    {
+      "name": "GroundAmbientColor",
+      "type": "float",
+      "count": 3,
+      "values": [
+        0.45,
+        0.45,
+        0.45
+      ]
+    },
+    {
+      "name": "CelestialStrength",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.8
+      ]
+    },
+    {
+      "name": "AmbientStrength",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.8
+      ]
+    },
+    {
+      "name": "EnvironmentReflectionStrength",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.72
+      ]
+    },
+    {
+      "name": "CelestialSpecularStrength",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.9
+      ]
+    },
+    {
+      "name": "SheenFloor",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.065
+      ]
+    },
+    {
+      "name": "RippleHighlightStrength",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.7
+      ]
+    }
+  ]
+}

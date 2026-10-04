@@ -1,0 +1,78 @@
+package com.vinlanx.luxium.client.shadows.neoskycelestia;
+
+import org.joml.Matrix4f;
+import org.joml.Vector3f;
+
+public record NeoSkyCelestiaFrameState(
+   boolean enabled,
+   boolean skyLightEnabled,
+   boolean moonLight,
+   int blockOnlyLightTexture,
+   int celestialLightLutTexture,
+   int nearDepthTexture,
+   int farDepthTexture,
+   boolean entityShadowEnabled,
+   int entityDepthTexture,
+   Matrix4f nearLightFromView,
+   Matrix4f farLightFromView,
+   Matrix4f entityLightFromView,
+   float nearRadius,
+   float farRadius,
+   float entityRadius,
+   float nearTexelSize,
+   float farTexelSize,
+   float entityTexelSize,
+   int filterSamples,
+   float baseBiasNear,
+   float baseBiasFar,
+   float entityBaseBias,
+   float slopeBias,
+   float cascadeBlendStart,
+   Vector3f lightDirection,
+   Vector3f directColor,
+   Vector3f skyAmbientColor,
+   Vector3f groundAmbientColor,
+   float directStrength,
+   float ambientStrength,
+   long nearGeneration,
+   long farGeneration,
+   long entityGeneration
+) {
+   public static NeoSkyCelestiaFrameState disabled(int celestialLightLutTexture, int fallbackDepthTexture) {
+      return new NeoSkyCelestiaFrameState(
+         false,
+         false,
+         false,
+         -1,
+         celestialLightLutTexture,
+         fallbackDepthTexture,
+         fallbackDepthTexture,
+         false,
+         fallbackDepthTexture,
+         new Matrix4f(),
+         new Matrix4f(),
+         new Matrix4f(),
+         1.0F,
+         1.0F,
+         1.0F,
+         1.0F,
+         1.0F,
+         1.0F,
+         4,
+         0.001F,
+         0.001F,
+         0.001F,
+         1.0F,
+         0.94F,
+         new Vector3f(0.0F, 1.0F, 0.0F),
+         new Vector3f(1.0F),
+         new Vector3f(1.0F),
+         new Vector3f(1.0F),
+         0.0F,
+         1.0F,
+         0L,
+         0L,
+         0L
+      );
+   }
+}

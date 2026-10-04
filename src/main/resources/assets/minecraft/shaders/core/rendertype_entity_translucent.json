@@ -1,0 +1,42 @@
+{
+  "blend": { "func": "add", "srcrgb": "srcalpha", "dstrgb": "1-srcalpha" },
+  "vertex": "luxium_entity_shadow",
+  "fragment": "luxium_entity_shadow",
+  "attributes": ["Position", "Color", "UV0", "UV1", "UV2", "Normal"],
+  "samplers": [
+    { "name": "Sampler0" }, { "name": "Sampler1" }, { "name": "Sampler2" },
+    { "name": "LuxiumBlockOnlyLightSampler" }, { "name": "LuxiumShadowMap0" }, { "name": "LuxiumShadowMap1" },
+    { "name": "LuxiumEntityShadowMap" }
+  ],
+  "uniforms": [
+    { "name": "ModelViewMat", "type": "matrix4x4", "count": 16, "values": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1] },
+    { "name": "ProjMat", "type": "matrix4x4", "count": 16, "values": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1] },
+    { "name": "LuxiumEntityLightFromView", "type": "matrix4x4", "count": 16, "values": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1] },
+    { "name": "LuxiumEntityShadowData", "type": "float", "count": 4, "values": [1,0.001,0.002,48] },
+    { "name": "LuxiumEntityShadowEnabled", "type": "int", "count": 1, "values": [0] },
+    { "name": "LuxiumEntityShadowCasterPass", "type": "int", "count": 1, "values": [0] },
+    { "name": "LuxiumLightFromView0", "type": "matrix4x4", "count": 16, "values": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1] },
+    { "name": "LuxiumLightFromView1", "type": "matrix4x4", "count": 16, "values": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1] },
+    { "name": "IViewRotMat", "type": "matrix3x3", "count": 9, "values": [1,0,0,0,1,0,0,0,1] },
+    { "name": "ColorModulator", "type": "float", "count": 4, "values": [1,1,1,1] },
+    { "name": "Light0_Direction", "type": "float", "count": 3, "values": [0,0,0] },
+    { "name": "Light1_Direction", "type": "float", "count": 3, "values": [0,0,0] },
+    { "name": "FogStart", "type": "float", "count": 1, "values": [0] },
+    { "name": "FogEnd", "type": "float", "count": 1, "values": [1] },
+    { "name": "FogColor", "type": "float", "count": 4, "values": [0,0,0,0] },
+    { "name": "FogShape", "type": "int", "count": 1, "values": [0] },
+    { "name": "LuxiumCascadeData", "type": "float", "count": 4, "values": [48,160,0.000651,0.000977] },
+    { "name": "LuxiumBiasData", "type": "float", "count": 4, "values": [0.0003,0.0005,0.002,0.78] },
+    { "name": "LuxiumSkyShadowEnabled", "type": "int", "count": 1, "values": [0] },
+    { "name": "LuxiumSkyLightEnabled", "type": "int", "count": 1, "values": [0] },
+    { "name": "LuxiumFilterSamples", "type": "int", "count": 1, "values": [4] },
+    { "name": "LuxiumAlphaCutoff", "type": "float", "count": 1, "values": [0.1] },
+    { "name": "LuxiumLightDirection", "type": "float", "count": 3, "values": [0,1,0] },
+    { "name": "LuxiumDirectColor", "type": "float", "count": 3, "values": [1,1,1] },
+    { "name": "LuxiumSkyAmbientColor", "type": "float", "count": 3, "values": [1,1,1] },
+    { "name": "LuxiumGroundAmbientColor", "type": "float", "count": 3, "values": [1,1,1] },
+    { "name": "LuxiumDirectStrength", "type": "float", "count": 1, "values": [0] },
+    { "name": "LuxiumAmbientStrength", "type": "float", "count": 1, "values": [1] },
+    { "name": "LuxiumVanillaBlockLightInSunShadows", "type": "float", "count": 1, "values": [0.1] }
+  ]
+}

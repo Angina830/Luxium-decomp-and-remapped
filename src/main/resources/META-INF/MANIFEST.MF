@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Specification-Title: luxium
+Specification-Vendor: vinlanx
+Specification-Version: 1
+Implementation-Title: rtx 2.8.0 видалив коментарі доб
+ авив коментар в воду
+Implementation-Version: 2.8.0-pre-alpha
+Implementation-Vendor: vinlanx
+Implementation-Timestamp: 2026-09-27T00:29:44+0300
+MixinConfigs: luxium.mixins.json
+

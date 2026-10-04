@@ -1,0 +1,240 @@
+{
+  "blend": {
+    "func": "add",
+    "srcrgb": "srcalpha",
+    "dstrgb": "1-srcalpha",
+    "srcalpha": "one",
+    "dstalpha": "1-srcalpha"
+  },
+  "vertex": "luxium:rain_puddle",
+  "fragment": "luxium:rain_puddle",
+  "attributes": [
+    "Position",
+    "UV0"
+  ],
+  "samplers": [
+    {
+      "name": "PuddleDepthSampler"
+    },
+    {
+      "name": "SceneSampler"
+    },
+    {
+      "name": "DepthSampler"
+    },
+    {
+      "name": "MicroNormalSampler"
+    }
+  ],
+  "uniforms": [
+    {
+      "name": "ViewProj",
+      "type": "matrix4x4",
+      "count": 16,
+      "values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "InvViewProj",
+      "type": "matrix4x4",
+      "count": 16,
+      "values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "CameraPos",
+      "type": "float",
+      "count": 3,
+      "values": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "ScreenSize",
+      "type": "float",
+      "count": 2,
+      "values": [
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Time",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0
+      ]
+    },
+    {
+      "name": "MaxVirtualDepth",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.195
+      ]
+    },
+    {
+      "name": "DepthCurve",
+      "type": "float",
+      "count": 1,
+      "values": [
+        2.95
+      ]
+    },
+    {
+      "name": "WetDarkening",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.52
+      ]
+    },
+    {
+      "name": "SurfaceOpacity",
+      "type": "float",
+      "count": 1,
+      "values": [
+        1.0
+      ]
+    },
+    {
+      "name": "EdgeSoftness",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.51
+      ]
+    },
+    {
+      "name": "WaveStrength",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.05
+      ]
+    },
+    {
+      "name": "WaveScale",
+      "type": "float",
+      "count": 1,
+      "values": [
+        9.15
+      ]
+    },
+    {
+      "name": "WaveSpeed",
+      "type": "float",
+      "count": 1,
+      "values": [
+        1.64
+      ]
+    },
+    {
+      "name": "RippleStrength",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.46
+      ]
+    },
+    {
+      "name": "RefractionStrength",
+      "type": "float",
+      "count": 1,
+      "values": [
+        2.63
+      ]
+    },
+    {
+      "name": "SsrEnabled",
+      "type": "int",
+      "count": 1,
+      "values": [
+        1
+      ]
+    },
+    {
+      "name": "SsrSteps",
+      "type": "int",
+      "count": 1,
+      "values": [
+        11
+      ]
+    },
+    {
+      "name": "SsrRefinementSteps",
+      "type": "int",
+      "count": 1,
+      "values": [
+        1
+      ]
+    },
+    {
+      "name": "SsrMaxDistance",
+      "type": "float",
+      "count": 1,
+      "values": [
+        45
+      ]
+    },
+    {
+      "name": "SsrThickness",
+      "type": "float",
+      "count": 1,
+      "values": [
+        2.0
+      ]
+    },
+    {
+      "name": "SsrEdgeFade",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.19
+      ]
+    },
+    {
+      "name": "SsrStrength",
+      "type": "float",
+      "count": 1,
+      "values": [
+        1.03
+      ]
+    }
+  ]
+}

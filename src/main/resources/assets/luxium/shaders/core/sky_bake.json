@@ -1,0 +1,43 @@
+{
+  "vertex": "luxium:sky_bake",
+  "fragment": "luxium:sky_bake",
+  "attributes": [
+    "Position"
+  ],
+  "uniforms": [
+    {
+      "name": "SunDir",
+      "type": "float",
+      "count": 3,
+      "values": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "name": "CachePass",
+      "type": "int",
+      "count": 1,
+      "values": [
+        1
+      ]
+    },
+    {
+      "name": "CubeFace",
+      "type": "int",
+      "count": 1,
+      "values": [
+        0
+      ]
+    },
+    {
+      "name": "CacheFaceSize",
+      "type": "int",
+      "count": 1,
+      "values": [
+        1024
+      ]
+    }
+  ]
+}

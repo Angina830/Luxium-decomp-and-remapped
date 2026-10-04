@@ -1,0 +1,17 @@
+{
+  "vertex": "luxium:tonemap",
+  "fragment": "luxium:kawase_source",
+  "attributes": ["Position", "UV0"],
+  "samplers": [{"name":"SceneSampler"},{"name":"DepthSampler"}],
+  "uniforms": [
+    {"name":"ModelViewMat","type":"matrix4x4","count":16,"values":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]},
+    {"name":"ProjMat","type":"matrix4x4","count":16,"values":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]},
+    {"name":"InverseViewProjection","type":"matrix4x4","count":16,"values":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]},
+    {"name":"InverseProjection","type":"matrix4x4","count":16,"values":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]},
+    {"name":"VolumeMinRelative","type":"float","count":3,"values":[0,0,0]},
+    {"name":"VolumeSize","type":"float","count":1,"values":[1]},
+    {"name":"SourceAtlasSize","type":"float","count":1,"values":[1]},
+    {"name":"SourceTilesPerRow","type":"float","count":1,"values":[1]},
+    {"name":"Threshold","type":"float","count":1,"values":[0.05]}
+  ]
+}

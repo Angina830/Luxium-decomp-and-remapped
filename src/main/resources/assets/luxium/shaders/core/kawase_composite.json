@@ -1,0 +1,13 @@
+{
+  "vertex":"luxium:tonemap","fragment":"luxium:kawase_composite","attributes":["Position","UV0"],
+  "samplers":[{"name":"GlowSampler"},{"name":"DepthSampler"}],
+  "uniforms":[
+    {"name":"ModelViewMat","type":"matrix4x4","count":16,"values":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]},
+    {"name":"ProjMat","type":"matrix4x4","count":16,"values":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]},
+    {"name":"InverseProjection","type":"matrix4x4","count":16,"values":[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]},
+    {"name":"GlowSize","type":"float","count":2,"values":[1,1]},
+    {"name":"Intensity","type":"float","count":1,"values":[1]},
+    {"name":"DepthTolerance","type":"float","count":1,"values":[0.35]},
+    {"name":"DepthOcclusion","type":"int","count":1,"values":[1]}
+  ]
+}

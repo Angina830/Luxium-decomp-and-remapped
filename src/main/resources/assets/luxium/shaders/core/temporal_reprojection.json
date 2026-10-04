@@ -1,0 +1,22 @@
+{
+  "blend": {
+    "func": "add",
+    "srcrgb": "one",
+    "dstrgb": "zero"
+  },
+  "vertex": "luxium:temporal_reprojection",
+  "fragment": "luxium:temporal_reprojection",
+  "attributes": [ "Position", "UV0" ],
+  "samplers": [
+    { "name": "HistoryColor" },
+    { "name": "MotionSampler" }
+  ],
+  "uniforms": [
+    { "name": "ModelViewMat", "type": "matrix4x4", "count": 16, "values": [1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1] },
+    { "name": "ProjMat", "type": "matrix4x4", "count": 16, "values": [1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1] },
+    { "name": "SourceTexelSize", "type": "float", "count": 2, "values": [0.001, 0.001] },
+    { "name": "ReprojectionStrength", "type": "float", "count": 1, "values": [1.0] },
+    { "name": "SyntheticFrame", "type": "int", "count": 1, "values": [0] },
+    { "name": "HistoryHasEdgeMetadata", "type": "int", "count": 1, "values": [0] }
+  ]
+}

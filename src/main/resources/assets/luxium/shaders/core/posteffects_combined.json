@@ -1,0 +1,742 @@
+{
+  "vertex": "luxium:posteffects_combined",
+  "fragment": "luxium:posteffects_combined",
+  "attributes": [
+    "Position",
+    "UV0"
+  ],
+  "samplers": [
+    {
+      "name": "DepthSampler"
+    },
+    {
+      "name": "CloudOcclusionSampler"
+    },
+    {
+      "name": "VolumetricShadowMap0"
+    },
+    {
+      "name": "VolumetricShadowMap1"
+    },
+    {
+      "name": "VolumetricEntityShadowMap"
+    }
+  ],
+  "uniforms": [
+    {
+      "name": "ModelViewMat",
+      "type": "matrix4x4",
+      "count": 16,
+      "values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "ProjMat",
+      "type": "matrix4x4",
+      "count": 16,
+      "values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "InverseProjMat",
+      "type": "matrix4x4",
+      "count": 16,
+      "values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "InverseViewMat",
+      "type": "matrix4x4",
+      "count": 16,
+      "values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "FogEnabled",
+      "type": "int",
+      "count": 1,
+      "values": [
+        1
+      ]
+    },
+    {
+      "name": "CelestialScatteringEnabled",
+      "type": "int",
+      "count": 1,
+      "values": [
+        1
+      ]
+    },
+    {
+      "name": "FogSunDir",
+      "type": "float",
+      "count": 3,
+      "values": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "name": "FogDensityAtOrigin",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.0
+      ]
+    },
+    {
+      "name": "FogExtinction",
+      "type": "float",
+      "count": 1,
+      "values": [
+        1.0
+      ]
+    },
+    {
+      "name": "FogScatteringBrightness",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.78
+      ]
+    },
+    {
+      "name": "FogMaxBrightness",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.68
+      ]
+    },
+    {
+      "name": "FogNearDensityBoost",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.0
+      ]
+    },
+    {
+      "name": "FogNearBoostRange",
+      "type": "float",
+      "count": 1,
+      "values": [
+        48.0
+      ]
+    },
+    {
+      "name": "FogDynamicCelestialColor",
+      "type": "int",
+      "count": 1,
+      "values": [
+        1
+      ]
+    },
+    {
+      "name": "FogCelestialColorBlend",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.38
+      ]
+    },
+    {
+      "name": "FogCelestialColor",
+      "type": "float",
+      "count": 3,
+      "values": [
+        1.0,
+        0.9,
+        0.7
+      ]
+    },
+    {
+      "name": "FogStartDistance",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.0
+      ]
+    },
+    {
+      "name": "FogNearFade",
+      "type": "float",
+      "count": 1,
+      "values": [
+        4.0
+      ]
+    },
+    {
+      "name": "FogMaxOpacity",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.82
+      ]
+    },
+    {
+      "name": "FogSkyTint",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.78
+      ]
+    },
+    {
+      "name": "FogScatteringStrength",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.65
+      ]
+    },
+    {
+      "name": "FogDistanceCurve",
+      "type": "float",
+      "count": 1,
+      "values": [
+        1.0
+      ]
+    },
+    {
+      "name": "FogHeightFalloff",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.04
+      ]
+    },
+    {
+      "name": "FogAmbientColor",
+      "type": "float",
+      "count": 3,
+      "values": [
+        0.5,
+        0.55,
+        0.6
+      ]
+    },
+    {
+      "name": "FogSkyColor",
+      "type": "float",
+      "count": 3,
+      "values": [
+        0.4,
+        0.55,
+        0.7
+      ]
+    },
+    {
+      "name": "FogSunColor",
+      "type": "float",
+      "count": 3,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "FogMoonColor",
+      "type": "float",
+      "count": 3,
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "FogMieParams",
+      "type": "float",
+      "count": 4,
+      "values": [
+        0.86,
+        0.94,
+        0.82,
+        0.91
+      ]
+    },
+    {
+      "name": "FogSunVisibility",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.0
+      ]
+    },
+    {
+      "name": "FogMoonVisibility",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.0
+      ]
+    },
+    {
+      "name": "SunScreenPos",
+      "type": "float",
+      "count": 2,
+      "values": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "name": "LightColor",
+      "type": "float",
+      "count": 3,
+      "values": [
+        1.0,
+        0.9,
+        0.7
+      ]
+    },
+    {
+      "name": "ScreenFade",
+      "type": "float",
+      "count": 1,
+      "values": [
+        1.0
+      ]
+    },
+    {
+      "name": "UseMoonStyle",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.0
+      ]
+    },
+    {
+      "name": "ScreenSize",
+      "type": "float",
+      "count": 2,
+      "values": [
+        1920.0,
+        1080.0
+      ]
+    },
+    {
+      "name": "UseCloudOcclusion",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.0
+      ]
+    },
+    {
+      "name": "RayStrength",
+      "type": "float",
+      "count": 1,
+      "values": [
+        1.0
+      ]
+    },
+    {
+      "name": "HaloStrength",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.25
+      ]
+    },
+    {
+      "name": "DiscStrength",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.08
+      ]
+    },
+    {
+      "name": "HaloRadius",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.14
+      ]
+    },
+    {
+      "name": "DiscRadius",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.018
+      ]
+    },
+    {
+      "name": "CenterSuppression",
+      "type": "float",
+      "count": 1,
+      "values": [
+        1.0
+      ]
+    },
+    {
+      "name": "FlareIntensity",
+      "type": "float",
+      "count": 1,
+      "values": [
+        1.0
+      ]
+    },
+    {
+      "name": "StreakIntensity",
+      "type": "float",
+      "count": 1,
+      "values": [
+        1.0
+      ]
+    },
+    {
+      "name": "StreakLength",
+      "type": "float",
+      "count": 1,
+      "values": [
+        1.0
+      ]
+    },
+    {
+      "name": "StreakWidth",
+      "type": "float",
+      "count": 1,
+      "values": [
+        1.0
+      ]
+    },
+    {
+      "name": "ChromaticSpread",
+      "type": "float",
+      "count": 1,
+      "values": [
+        1.0
+      ]
+    },
+    {
+      "name": "GhostIntensity",
+      "type": "float",
+      "count": 1,
+      "values": [
+        1.0
+      ]
+    },
+    {
+      "name": "GhostSize",
+      "type": "float",
+      "count": 1,
+      "values": [
+        1.0
+      ]
+    },
+    {
+      "name": "FlareSpread",
+      "type": "float",
+      "count": 1,
+      "values": [
+        1.0
+      ]
+    },
+    {
+      "name": "RenderFogEffect",
+      "type": "int",
+      "count": 1,
+      "values": [
+        0
+      ]
+    },
+    {
+      "name": "RenderSkyRays",
+      "type": "int",
+      "count": 1,
+      "values": [
+        0
+      ]
+    },
+    {
+      "name": "RenderLensFlare",
+      "type": "int",
+      "count": 1,
+      "values": [
+        0
+      ]
+    },
+    {
+      "name": "RenderCelestialVisibility",
+      "type": "int",
+      "count": 1,
+      "values": [
+        0
+      ]
+    },
+    {
+      "name": "RenderSkyVolumetricRays",
+      "type": "int",
+      "count": 1,
+      "values": [
+        0
+      ]
+    },
+    {
+      "name": "VolumetricNearLightFromView",
+      "type": "matrix4x4",
+      "count": 16,
+      "values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "VolumetricFarLightFromView",
+      "type": "matrix4x4",
+      "count": 16,
+      "values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "VolumetricEntityLightFromView",
+      "type": "matrix4x4",
+      "count": 16,
+      "values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "VolumetricCascadeData",
+      "type": "float",
+      "count": 4,
+      "values": [
+        48.0,
+        160.0,
+        0.0001,
+        0.0001
+      ]
+    },
+    {
+      "name": "VolumetricCascadeBlendStart",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.78
+      ]
+    },
+    {
+      "name": "VolumetricLightDirectionView",
+      "type": "float",
+      "count": 3,
+      "values": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "name": "VolumetricLightColor",
+      "type": "float",
+      "count": 3,
+      "values": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "VolumetricLightStrength",
+      "type": "float",
+      "count": 1,
+      "values": [
+        1.0
+      ]
+    },
+    {
+      "name": "VolumetricIntensity",
+      "type": "float",
+      "count": 1,
+      "values": [
+        1.0
+      ]
+    },
+    {
+      "name": "VolumetricDensity",
+      "type": "float",
+      "count": 1,
+      "values": [
+        1.0
+      ]
+    },
+    {
+      "name": "VolumetricSamples",
+      "type": "int",
+      "count": 1,
+      "values": [
+        16
+      ]
+    },
+    {
+      "name": "VolumetricUniformity",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.0
+      ]
+    },
+    {
+      "name": "VolumetricSideVisibility",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.5
+      ]
+    },
+    {
+      "name": "VolumetricHazeSuppression",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.4
+      ]
+    },
+    {
+      "name": "VolumetricEntityOcclusionEnabled",
+      "type": "int",
+      "count": 1,
+      "values": [
+        0
+      ]
+    },
+    {
+      "name": "VolumetricEntityShadowBias",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.0001
+      ]
+    },
+    {
+      "name": "VolumetricMaxDistance",
+      "type": "float",
+      "count": 1,
+      "values": [
+        160.0
+      ]
+    },
+    {
+      "name": "VolumetricAnisotropy",
+      "type": "float",
+      "count": 1,
+      "values": [
+        0.78
+      ]
+    }
+  ]
+}

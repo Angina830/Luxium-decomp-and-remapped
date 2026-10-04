@@ -1,0 +1,24 @@
+{
+  "vertex": "luxium:lensflare",
+  "fragment": "luxium:lensflare",
+  "attributes": ["Position", "UV0"],
+  "samplers": [{"name": "DepthSampler"}, {"name": "CloudOcclusionSampler"}],
+  "uniforms": [
+    {"name": "ModelViewMat", "type": "matrix4x4", "count": 16, "values": [1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1]},
+    {"name": "ProjMat", "type": "matrix4x4", "count": 16, "values": [1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1]},
+    {"name": "SunScreenPos", "type": "float", "count": 2, "values": [0.5, 0.5]},
+    {"name": "LightColor", "type": "float", "count": 3, "values": [1.0, 0.9, 0.7]},
+    {"name": "ScreenFade", "type": "float", "count": 1, "values": [1.0]},
+    {"name": "UseMoonStyle", "type": "float", "count": 1, "values": [0.0]},
+    {"name": "ScreenSize", "type": "float", "count": 2, "values": [1920.0, 1080.0]},
+    {"name": "UseCloudOcclusion", "type": "float", "count": 1, "values": [0.0]},
+    {"name": "FlareIntensity", "type": "float", "count": 1, "values": [1.0]},
+    {"name": "StreakIntensity", "type": "float", "count": 1, "values": [1.0]},
+    {"name": "StreakLength", "type": "float", "count": 1, "values": [1.0]},
+    {"name": "StreakWidth", "type": "float", "count": 1, "values": [1.0]},
+    {"name": "ChromaticSpread", "type": "float", "count": 1, "values": [1.0]},
+    {"name": "GhostIntensity", "type": "float", "count": 1, "values": [1.0]},
+    {"name": "GhostSize", "type": "float", "count": 1, "values": [1.0]},
+    {"name": "FlareSpread", "type": "float", "count": 1, "values": [1.0]}
+  ]
+}

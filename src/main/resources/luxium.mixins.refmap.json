@@ -1,0 +1,262 @@
+{
+  "mappings": {
+    "com/vinlanx/luxium/mixin/ForgeModelBlockRendererMixin": {
+      "Lnet/minecraft/world/level/block/Block;shouldRenderFace(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;)Z": "Lnet/minecraft/world/level/block/Block;shouldRenderFace(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;)Z"
+    },
+    "com/vinlanx/luxium/mixin/EntityRenderDispatcherAccessor": {
+      "shouldRenderShadow": "shouldRenderShadow:Z"
+    },
+    "com/vinlanx/luxium/mixin/LightTextureAccessor": {
+      "updateLightTexture": "updateLightTexture:Z"
+    },
+    "com/vinlanx/luxium/mixin/LightTextureMixin": {
+      "updateLightTexture": "Lnet/minecraft/client/renderer/LightTexture;updateLightTexture(F)V",
+      "Lnet/minecraft/client/renderer/LightTexture;getBrightness(Lnet/minecraft/world/level/dimension/DimensionType;I)F": "Lnet/minecraft/client/renderer/LightTexture;getBrightness(Lnet/minecraft/world/level/dimension/DimensionType;I)F",
+      "close": "Lnet/minecraft/client/renderer/LightTexture;close()V"
+    },
+    "com/vinlanx/luxium/mixin/sky/ShaderInstanceSkyShadowMixin": {
+      "apply": "Lnet/minecraft/client/renderer/ShaderInstance;apply()V"
+    },
+    "com/vinlanx/luxium/mixin/MinecraftAccessor": {
+      "mainRenderTarget": "mainRenderTarget:Lcom/mojang/blaze3d/pipeline/RenderTarget;"
+    },
+    "com/vinlanx/luxium/mixin/CameraMixin": {
+      "isDetached": "Lnet/minecraft/client/Camera;isDetached()Z"
+    },
+    "com/vinlanx/luxium/mixin/EntityRendererMixin": {
+      "getPackedLightCoords": "Lnet/minecraft/client/renderer/entity/EntityRenderer;getPackedLightCoords(Lnet/minecraft/world/entity/Entity;F)I",
+      "render": "Lnet/minecraft/client/renderer/entity/EntityRenderer;render(Lnet/minecraft/world/entity/Entity;FFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V"
+    },
+    "com/vinlanx/luxium/mixin/GlStateManagerMixin": {
+      "_enableCull": "Lcom/mojang/blaze3d/platform/GlStateManager;_enableCull()V",
+      "_viewport": "Lcom/mojang/blaze3d/platform/GlStateManager;_viewport(IIII)V"
+    },
+    "com/vinlanx/luxium/mixin/ChunkRenderDispatcherRenderChunkMixin": {
+      "createCompileTask": "Lnet/minecraft/client/renderer/chunk/ChunkRenderDispatcher$RenderChunk;createCompileTask(Lnet/minecraft/client/renderer/chunk/RenderRegionCache;)Lnet/minecraft/client/renderer/chunk/ChunkRenderDispatcher$RenderChunk$ChunkCompileTask;"
+    },
+    "com/vinlanx/luxium/mixin/MultiPlayerGameModeMixin": {
+      "continueDestroyBlock": "Lnet/minecraft/client/multiplayer/MultiPlayerGameMode;continueDestroyBlock(Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Z",
+      "startDestroyBlock": "Lnet/minecraft/client/multiplayer/MultiPlayerGameMode;startDestroyBlock(Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Z",
+      "destroyBlock": "Lnet/minecraft/client/multiplayer/MultiPlayerGameMode;destroyBlock(Lnet/minecraft/core/BlockPos;)Z",
+      "useItemOn": "Lnet/minecraft/client/multiplayer/MultiPlayerGameMode;useItemOn(Lnet/minecraft/client/player/LocalPlayer;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;"
+    },
+    "com/vinlanx/luxium/mixin/LevelBlockStateMixin": {
+      "onBlockStateChange(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;)V": "Lnet/minecraft/world/level/Level;onBlockStateChange(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;)V"
+    },
+    "com/vinlanx/luxium/mixin/BlockEntityRenderDispatcherMixin": {
+      "render": "Lnet/minecraft/client/renderer/blockentity/BlockEntityRenderDispatcher;render(Lnet/minecraft/world/level/block/entity/BlockEntity;FLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;)V"
+    },
+    "com/vinlanx/luxium/mixin/BlockLightEngineMixin": {
+      "getEmission": "Lnet/minecraft/world/level/lighting/BlockLightEngine;getEmission(JLnet/minecraft/world/level/block/state/BlockState;)I"
+    },
+    "com/vinlanx/luxium/mixin/LevelRendererAccessor": {
+      "renderChunkLayer": "renderChunkLayer(Lnet/minecraft/client/renderer/RenderType;Lcom/mojang/blaze3d/vertex/PoseStack;DDDLorg/joml/Matrix4f;)V",
+      "cullingFrustum": "cullingFrustum:Lnet/minecraft/client/renderer/culling/Frustum;",
+      "compileChunks": "compileChunks(Lnet/minecraft/client/Camera;)V",
+      "setupRender": "setupRender(Lnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/culling/Frustum;ZZ)V"
+    },
+    "com/vinlanx/luxium/mixin/LightEngineMixin": {
+      "clearChunkCache": "clearChunkCache()V"
+    },
+    "com/vinlanx/luxium/mixin/ClientChunkCacheMixin": {
+      "drop": "Lnet/minecraft/client/multiplayer/ClientChunkCache;drop(II)V",
+      "updateViewRadius": "Lnet/minecraft/client/multiplayer/ClientChunkCache;updateViewRadius(I)V",
+      "replaceWithPacketData": "Lnet/minecraft/client/multiplayer/ClientChunkCache;replaceWithPacketData(IILnet/minecraft/network/FriendlyByteBuf;Lnet/minecraft/nbt/CompoundTag;Ljava/util/function/Consumer;)Lnet/minecraft/world/level/chunk/LevelChunk;"
+    },
+    "com/vinlanx/luxium/mixin/RenderTargetAccessor": {
+      "colorTextureId": "colorTextureId:I"
+    },
+    "com/vinlanx/luxium/mixin/ModelBlockRendererMixin": {
+      "Lnet/minecraft/world/level/block/Block;shouldRenderFace(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;)Z": "Lnet/minecraft/world/level/block/Block;shouldRenderFace(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;)Z"
+    },
+    "com/vinlanx/luxium/mixin/GameRendererAccessor": {
+      "reloadShaders": "reloadShaders(Lnet/minecraft/server/packs/resources/ResourceProvider;)V"
+    },
+    "com/vinlanx/luxium/mixin/LevelRendererMixin": {
+      "Lnet/minecraft/core/BlockPos;containing(DDD)Lnet/minecraft/core/BlockPos;": "Lnet/minecraft/core/BlockPos;containing(DDD)Lnet/minecraft/core/BlockPos;",
+      "Lnet/minecraft/client/renderer/LevelRenderer;setupRender(Lnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/culling/Frustum;ZZ)V": "Lnet/minecraft/client/renderer/LevelRenderer;setupRender(Lnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/culling/Frustum;ZZ)V",
+      "renderLevel": "Lnet/minecraft/client/renderer/LevelRenderer;renderLevel(Lcom/mojang/blaze3d/vertex/PoseStack;FJZLnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/GameRenderer;Lnet/minecraft/client/renderer/LightTexture;Lorg/joml/Matrix4f;)V",
+      "renderChunkLayer": "Lnet/minecraft/client/renderer/LevelRenderer;renderChunkLayer(Lnet/minecraft/client/renderer/RenderType;Lcom/mojang/blaze3d/vertex/PoseStack;DDDLorg/joml/Matrix4f;)V",
+      "allChanged": "Lnet/minecraft/client/renderer/LevelRenderer;allChanged()V",
+      "Lcom/mojang/blaze3d/vertex/PoseStack;pushPose()V": "Lcom/mojang/blaze3d/vertex/PoseStack;pushPose()V",
+      "getLightColor(Lnet/minecraft/world/level/BlockAndTintGetter;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)I": "Lnet/minecraft/client/renderer/LevelRenderer;getLightColor(Lnet/minecraft/world/level/BlockAndTintGetter;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)I",
+      "renderClouds": "Lnet/minecraft/client/renderer/LevelRenderer;renderClouds(Lcom/mojang/blaze3d/vertex/PoseStack;Lorg/joml/Matrix4f;FDDD)V",
+      "Lnet/minecraft/client/renderer/LevelRenderer;renderChunkLayer(Lnet/minecraft/client/renderer/RenderType;Lcom/mojang/blaze3d/vertex/PoseStack;DDDLorg/joml/Matrix4f;)V": "Lnet/minecraft/client/renderer/LevelRenderer;renderChunkLayer(Lnet/minecraft/client/renderer/RenderType;Lcom/mojang/blaze3d/vertex/PoseStack;DDDLorg/joml/Matrix4f;)V",
+      "renderSky": "Lnet/minecraft/client/renderer/LevelRenderer;renderSky(Lcom/mojang/blaze3d/vertex/PoseStack;Lorg/joml/Matrix4f;FLnet/minecraft/client/Camera;ZLjava/lang/Runnable;)V",
+      "setLevel": "Lnet/minecraft/client/renderer/LevelRenderer;setLevel(Lnet/minecraft/client/multiplayer/ClientLevel;)V",
+      "setupRender": "Lnet/minecraft/client/renderer/LevelRenderer;setupRender(Lnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/culling/Frustum;ZZ)V",
+      "renderEntity": "Lnet/minecraft/client/renderer/LevelRenderer;renderEntity(Lnet/minecraft/world/entity/Entity;DDDFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;)V",
+      "Lcom/mojang/blaze3d/vertex/VertexBuffer;drawWithShader(Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lnet/minecraft/client/renderer/ShaderInstance;)V": "Lcom/mojang/blaze3d/vertex/VertexBuffer;drawWithShader(Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lnet/minecraft/client/renderer/ShaderInstance;)V",
+      "Lnet/minecraft/client/renderer/ViewArea;repositionCamera(DD)V": "Lnet/minecraft/client/renderer/ViewArea;repositionCamera(DD)V"
+    },
+    "com/vinlanx/luxium/mixin/GuiMixin": {
+      "Lnet/minecraft/client/gui/Gui;renderVignette(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/world/entity/Entity;)V": "Lnet/minecraft/client/gui/Gui;renderVignette(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/world/entity/Entity;)V",
+      "renderVignette": "Lnet/minecraft/client/gui/Gui;renderVignette(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/world/entity/Entity;)V",
+      "render": "Lnet/minecraft/client/gui/Gui;render(Lnet/minecraft/client/gui/GuiGraphics;F)V"
+    },
+    "com/vinlanx/luxium/mixin/sky/MinecraftSkyShadowLifecycleMixin": {
+      "clearLevel(Lnet/minecraft/client/gui/screens/Screen;)V": "Lnet/minecraft/client/Minecraft;clearLevel(Lnet/minecraft/client/gui/screens/Screen;)V",
+      "setLevel": "Lnet/minecraft/client/Minecraft;setLevel(Lnet/minecraft/client/multiplayer/ClientLevel;)V"
+    },
+    "com/vinlanx/luxium/mixin/ClientLevelMixin": {
+      "unload": "Lnet/minecraft/client/multiplayer/ClientLevel;unload(Lnet/minecraft/world/level/chunk/LevelChunk;)V",
+      "tick": "Lnet/minecraft/client/multiplayer/ClientLevel;tick(Ljava/util/function/BooleanSupplier;)V"
+    },
+    "com/vinlanx/luxium/mixin/GameRendererMixin": {
+      "renderLevel": "Lnet/minecraft/client/renderer/GameRenderer;renderLevel(FJLcom/mojang/blaze3d/vertex/PoseStack;)V",
+      "Lnet/minecraft/client/renderer/LevelRenderer;renderLevel(Lcom/mojang/blaze3d/vertex/PoseStack;FJZLnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/GameRenderer;Lnet/minecraft/client/renderer/LightTexture;Lorg/joml/Matrix4f;)V": "Lnet/minecraft/client/renderer/LevelRenderer;renderLevel(Lcom/mojang/blaze3d/vertex/PoseStack;FJZLnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/GameRenderer;Lnet/minecraft/client/renderer/LightTexture;Lorg/joml/Matrix4f;)V",
+      "Lnet/minecraft/client/renderer/GameRenderer;renderLevel(FJLcom/mojang/blaze3d/vertex/PoseStack;)V": "Lnet/minecraft/client/renderer/GameRenderer;renderLevel(FJLcom/mojang/blaze3d/vertex/PoseStack;)V",
+      "reloadShaders": "Lnet/minecraft/client/renderer/GameRenderer;reloadShaders(Lnet/minecraft/server/packs/resources/ResourceProvider;)V",
+      "render": "Lnet/minecraft/client/renderer/GameRenderer;render(FJZ)V",
+      "renderItemInHand": "Lnet/minecraft/client/renderer/GameRenderer;renderItemInHand(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/Camera;F)V",
+      "Lnet/minecraft/client/gui/Gui;render(Lnet/minecraft/client/gui/GuiGraphics;F)V": "Lnet/minecraft/client/gui/Gui;render(Lnet/minecraft/client/gui/GuiGraphics;F)V"
+    },
+    "com/vinlanx/luxium/mixin/CameraAccessor": {
+      "setRotation": "setRotation(FF)V",
+      "setPosition": "setPosition(DDD)V"
+    },
+    "com/vinlanx/luxium/mixin/OptionsScreenMixin": {
+      "init": "Lnet/minecraft/client/gui/screens/OptionsScreen;init()V",
+      "Lnet/minecraft/client/gui/screens/OptionsScreen;openScreenButton(Lnet/minecraft/network/chat/Component;Ljava/util/function/Supplier;)Lnet/minecraft/client/gui/components/Button;": "Lnet/minecraft/client/gui/screens/OptionsScreen;openScreenButton(Lnet/minecraft/network/chat/Component;Ljava/util/function/Supplier;)Lnet/minecraft/client/gui/components/Button;"
+    },
+    "com/vinlanx/luxium/mixin/ItemBlockRenderTypesMixin": {
+      "getChunkRenderType": "Lnet/minecraft/client/renderer/ItemBlockRenderTypes;getChunkRenderType(Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/client/renderer/RenderType;",
+      "getMovingBlockRenderType": "Lnet/minecraft/client/renderer/ItemBlockRenderTypes;getMovingBlockRenderType(Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/client/renderer/RenderType;"
+    },
+    "com/vinlanx/luxium/mixin/ChunkRenderDispatcherRebuildTaskMixin": {
+      "compile": "Lnet/minecraft/client/renderer/chunk/ChunkRenderDispatcher$RenderChunk$RebuildTask;compile(FFFLnet/minecraft/client/renderer/ChunkBufferBuilderPack;)Lnet/minecraft/client/renderer/chunk/ChunkRenderDispatcher$RenderChunk$RebuildTask$CompileResults;",
+      "net.minecraft.client.renderer.chunk.ChunkRenderDispatcher$RenderChunk$RebuildTask": "net/minecraft/client/renderer/chunk/ChunkRenderDispatcher$RenderChunk$RebuildTask"
+    }
+  },
+  "data": {
+    "searge": {
+      "com/vinlanx/luxium/mixin/ForgeModelBlockRendererMixin": {
+        "Lnet/minecraft/world/level/block/Block;shouldRenderFace(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;)Z": "Lnet/minecraft/world/level/block/Block;shouldRenderFace(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;)Z"
+      },
+      "com/vinlanx/luxium/mixin/EntityRenderDispatcherAccessor": {
+        "shouldRenderShadow": "shouldRenderShadow:Z"
+      },
+      "com/vinlanx/luxium/mixin/LightTextureAccessor": {
+        "updateLightTexture": "updateLightTexture:Z"
+      },
+      "com/vinlanx/luxium/mixin/LightTextureMixin": {
+        "updateLightTexture": "Lnet/minecraft/client/renderer/LightTexture;updateLightTexture(F)V",
+        "Lnet/minecraft/client/renderer/LightTexture;getBrightness(Lnet/minecraft/world/level/dimension/DimensionType;I)F": "Lnet/minecraft/client/renderer/LightTexture;getBrightness(Lnet/minecraft/world/level/dimension/DimensionType;I)F",
+        "close": "Lnet/minecraft/client/renderer/LightTexture;close()V"
+      },
+      "com/vinlanx/luxium/mixin/sky/ShaderInstanceSkyShadowMixin": {
+        "apply": "Lnet/minecraft/client/renderer/ShaderInstance;apply()V"
+      },
+      "com/vinlanx/luxium/mixin/MinecraftAccessor": {
+        "mainRenderTarget": "mainRenderTarget:Lcom/mojang/blaze3d/pipeline/RenderTarget;"
+      },
+      "com/vinlanx/luxium/mixin/CameraMixin": {
+        "isDetached": "Lnet/minecraft/client/Camera;isDetached()Z"
+      },
+      "com/vinlanx/luxium/mixin/EntityRendererMixin": {
+        "getPackedLightCoords": "Lnet/minecraft/client/renderer/entity/EntityRenderer;getPackedLightCoords(Lnet/minecraft/world/entity/Entity;F)I",
+        "render": "Lnet/minecraft/client/renderer/entity/EntityRenderer;render(Lnet/minecraft/world/entity/Entity;FFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V"
+      },
+      "com/vinlanx/luxium/mixin/GlStateManagerMixin": {
+        "_enableCull": "Lcom/mojang/blaze3d/platform/GlStateManager;_enableCull()V",
+        "_viewport": "Lcom/mojang/blaze3d/platform/GlStateManager;_viewport(IIII)V"
+      },
+      "com/vinlanx/luxium/mixin/ChunkRenderDispatcherRenderChunkMixin": {
+        "createCompileTask": "Lnet/minecraft/client/renderer/chunk/ChunkRenderDispatcher$RenderChunk;createCompileTask(Lnet/minecraft/client/renderer/chunk/RenderRegionCache;)Lnet/minecraft/client/renderer/chunk/ChunkRenderDispatcher$RenderChunk$ChunkCompileTask;"
+      },
+      "com/vinlanx/luxium/mixin/MultiPlayerGameModeMixin": {
+        "continueDestroyBlock": "Lnet/minecraft/client/multiplayer/MultiPlayerGameMode;continueDestroyBlock(Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Z",
+        "startDestroyBlock": "Lnet/minecraft/client/multiplayer/MultiPlayerGameMode;startDestroyBlock(Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Z",
+        "destroyBlock": "Lnet/minecraft/client/multiplayer/MultiPlayerGameMode;destroyBlock(Lnet/minecraft/core/BlockPos;)Z",
+        "useItemOn": "Lnet/minecraft/client/multiplayer/MultiPlayerGameMode;useItemOn(Lnet/minecraft/client/player/LocalPlayer;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;"
+      },
+      "com/vinlanx/luxium/mixin/LevelBlockStateMixin": {
+        "onBlockStateChange(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;)V": "Lnet/minecraft/world/level/Level;onBlockStateChange(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;)V"
+      },
+      "com/vinlanx/luxium/mixin/BlockEntityRenderDispatcherMixin": {
+        "render": "Lnet/minecraft/client/renderer/blockentity/BlockEntityRenderDispatcher;render(Lnet/minecraft/world/level/block/entity/BlockEntity;FLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;)V"
+      },
+      "com/vinlanx/luxium/mixin/BlockLightEngineMixin": {
+        "getEmission": "Lnet/minecraft/world/level/lighting/BlockLightEngine;getEmission(JLnet/minecraft/world/level/block/state/BlockState;)I"
+      },
+      "com/vinlanx/luxium/mixin/LevelRendererAccessor": {
+        "renderChunkLayer": "renderChunkLayer(Lnet/minecraft/client/renderer/RenderType;Lcom/mojang/blaze3d/vertex/PoseStack;DDDLorg/joml/Matrix4f;)V",
+        "cullingFrustum": "cullingFrustum:Lnet/minecraft/client/renderer/culling/Frustum;",
+        "compileChunks": "compileChunks(Lnet/minecraft/client/Camera;)V",
+        "setupRender": "setupRender(Lnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/culling/Frustum;ZZ)V"
+      },
+      "com/vinlanx/luxium/mixin/LightEngineMixin": {
+        "clearChunkCache": "clearChunkCache()V"
+      },
+      "com/vinlanx/luxium/mixin/ClientChunkCacheMixin": {
+        "drop": "Lnet/minecraft/client/multiplayer/ClientChunkCache;drop(II)V",
+        "updateViewRadius": "Lnet/minecraft/client/multiplayer/ClientChunkCache;updateViewRadius(I)V",
+        "replaceWithPacketData": "Lnet/minecraft/client/multiplayer/ClientChunkCache;replaceWithPacketData(IILnet/minecraft/network/FriendlyByteBuf;Lnet/minecraft/nbt/CompoundTag;Ljava/util/function/Consumer;)Lnet/minecraft/world/level/chunk/LevelChunk;"
+      },
+      "com/vinlanx/luxium/mixin/RenderTargetAccessor": {
+        "colorTextureId": "colorTextureId:I"
+      },
+      "com/vinlanx/luxium/mixin/ModelBlockRendererMixin": {
+        "Lnet/minecraft/world/level/block/Block;shouldRenderFace(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;)Z": "Lnet/minecraft/world/level/block/Block;shouldRenderFace(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;)Z"
+      },
+      "com/vinlanx/luxium/mixin/GameRendererAccessor": {
+        "reloadShaders": "reloadShaders(Lnet/minecraft/server/packs/resources/ResourceProvider;)V"
+      },
+      "com/vinlanx/luxium/mixin/LevelRendererMixin": {
+        "Lnet/minecraft/core/BlockPos;containing(DDD)Lnet/minecraft/core/BlockPos;": "Lnet/minecraft/core/BlockPos;containing(DDD)Lnet/minecraft/core/BlockPos;",
+        "Lnet/minecraft/client/renderer/LevelRenderer;setupRender(Lnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/culling/Frustum;ZZ)V": "Lnet/minecraft/client/renderer/LevelRenderer;setupRender(Lnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/culling/Frustum;ZZ)V",
+        "renderLevel": "Lnet/minecraft/client/renderer/LevelRenderer;renderLevel(Lcom/mojang/blaze3d/vertex/PoseStack;FJZLnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/GameRenderer;Lnet/minecraft/client/renderer/LightTexture;Lorg/joml/Matrix4f;)V",
+        "renderChunkLayer": "Lnet/minecraft/client/renderer/LevelRenderer;renderChunkLayer(Lnet/minecraft/client/renderer/RenderType;Lcom/mojang/blaze3d/vertex/PoseStack;DDDLorg/joml/Matrix4f;)V",
+        "allChanged": "Lnet/minecraft/client/renderer/LevelRenderer;allChanged()V",
+        "Lcom/mojang/blaze3d/vertex/PoseStack;pushPose()V": "Lcom/mojang/blaze3d/vertex/PoseStack;pushPose()V",
+        "getLightColor(Lnet/minecraft/world/level/BlockAndTintGetter;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)I": "Lnet/minecraft/client/renderer/LevelRenderer;getLightColor(Lnet/minecraft/world/level/BlockAndTintGetter;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)I",
+        "renderClouds": "Lnet/minecraft/client/renderer/LevelRenderer;renderClouds(Lcom/mojang/blaze3d/vertex/PoseStack;Lorg/joml/Matrix4f;FDDD)V",
+        "Lnet/minecraft/client/renderer/LevelRenderer;renderChunkLayer(Lnet/minecraft/client/renderer/RenderType;Lcom/mojang/blaze3d/vertex/PoseStack;DDDLorg/joml/Matrix4f;)V": "Lnet/minecraft/client/renderer/LevelRenderer;renderChunkLayer(Lnet/minecraft/client/renderer/RenderType;Lcom/mojang/blaze3d/vertex/PoseStack;DDDLorg/joml/Matrix4f;)V",
+        "renderSky": "Lnet/minecraft/client/renderer/LevelRenderer;renderSky(Lcom/mojang/blaze3d/vertex/PoseStack;Lorg/joml/Matrix4f;FLnet/minecraft/client/Camera;ZLjava/lang/Runnable;)V",
+        "setLevel": "Lnet/minecraft/client/renderer/LevelRenderer;setLevel(Lnet/minecraft/client/multiplayer/ClientLevel;)V",
+        "setupRender": "Lnet/minecraft/client/renderer/LevelRenderer;setupRender(Lnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/culling/Frustum;ZZ)V",
+        "renderEntity": "Lnet/minecraft/client/renderer/LevelRenderer;renderEntity(Lnet/minecraft/world/entity/Entity;DDDFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;)V",
+        "Lcom/mojang/blaze3d/vertex/VertexBuffer;drawWithShader(Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lnet/minecraft/client/renderer/ShaderInstance;)V": "Lcom/mojang/blaze3d/vertex/VertexBuffer;drawWithShader(Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lnet/minecraft/client/renderer/ShaderInstance;)V",
+        "Lnet/minecraft/client/renderer/ViewArea;repositionCamera(DD)V": "Lnet/minecraft/client/renderer/ViewArea;repositionCamera(DD)V"
+      },
+      "com/vinlanx/luxium/mixin/GuiMixin": {
+        "Lnet/minecraft/client/gui/Gui;renderVignette(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/world/entity/Entity;)V": "Lnet/minecraft/client/gui/Gui;renderVignette(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/world/entity/Entity;)V",
+        "renderVignette": "Lnet/minecraft/client/gui/Gui;renderVignette(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/world/entity/Entity;)V",
+        "render": "Lnet/minecraft/client/gui/Gui;render(Lnet/minecraft/client/gui/GuiGraphics;F)V"
+      },
+      "com/vinlanx/luxium/mixin/sky/MinecraftSkyShadowLifecycleMixin": {
+        "clearLevel(Lnet/minecraft/client/gui/screens/Screen;)V": "Lnet/minecraft/client/Minecraft;clearLevel(Lnet/minecraft/client/gui/screens/Screen;)V",
+        "setLevel": "Lnet/minecraft/client/Minecraft;setLevel(Lnet/minecraft/client/multiplayer/ClientLevel;)V"
+      },
+      "com/vinlanx/luxium/mixin/ClientLevelMixin": {
+        "unload": "Lnet/minecraft/client/multiplayer/ClientLevel;unload(Lnet/minecraft/world/level/chunk/LevelChunk;)V",
+        "tick": "Lnet/minecraft/client/multiplayer/ClientLevel;tick(Ljava/util/function/BooleanSupplier;)V"
+      },
+      "com/vinlanx/luxium/mixin/GameRendererMixin": {
+        "renderLevel": "Lnet/minecraft/client/renderer/GameRenderer;renderLevel(FJLcom/mojang/blaze3d/vertex/PoseStack;)V",
+        "Lnet/minecraft/client/renderer/LevelRenderer;renderLevel(Lcom/mojang/blaze3d/vertex/PoseStack;FJZLnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/GameRenderer;Lnet/minecraft/client/renderer/LightTexture;Lorg/joml/Matrix4f;)V": "Lnet/minecraft/client/renderer/LevelRenderer;renderLevel(Lcom/mojang/blaze3d/vertex/PoseStack;FJZLnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/GameRenderer;Lnet/minecraft/client/renderer/LightTexture;Lorg/joml/Matrix4f;)V",
+        "Lnet/minecraft/client/renderer/GameRenderer;renderLevel(FJLcom/mojang/blaze3d/vertex/PoseStack;)V": "Lnet/minecraft/client/renderer/GameRenderer;renderLevel(FJLcom/mojang/blaze3d/vertex/PoseStack;)V",
+        "reloadShaders": "Lnet/minecraft/client/renderer/GameRenderer;reloadShaders(Lnet/minecraft/server/packs/resources/ResourceProvider;)V",
+        "render": "Lnet/minecraft/client/renderer/GameRenderer;render(FJZ)V",
+        "renderItemInHand": "Lnet/minecraft/client/renderer/GameRenderer;renderItemInHand(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/Camera;F)V",
+        "Lnet/minecraft/client/gui/Gui;render(Lnet/minecraft/client/gui/GuiGraphics;F)V": "Lnet/minecraft/client/gui/Gui;render(Lnet/minecraft/client/gui/GuiGraphics;F)V"
+      },
+      "com/vinlanx/luxium/mixin/CameraAccessor": {
+        "setRotation": "setRotation(FF)V",
+        "setPosition": "setPosition(DDD)V"
+      },
+      "com/vinlanx/luxium/mixin/OptionsScreenMixin": {
+        "init": "Lnet/minecraft/client/gui/screens/OptionsScreen;init()V",
+        "Lnet/minecraft/client/gui/screens/OptionsScreen;openScreenButton(Lnet/minecraft/network/chat/Component;Ljava/util/function/Supplier;)Lnet/minecraft/client/gui/components/Button;": "Lnet/minecraft/client/gui/screens/OptionsScreen;openScreenButton(Lnet/minecraft/network/chat/Component;Ljava/util/function/Supplier;)Lnet/minecraft/client/gui/components/Button;"
+      },
+      "com/vinlanx/luxium/mixin/ItemBlockRenderTypesMixin": {
+        "getChunkRenderType": "Lnet/minecraft/client/renderer/ItemBlockRenderTypes;getChunkRenderType(Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/client/renderer/RenderType;",
+        "getMovingBlockRenderType": "Lnet/minecraft/client/renderer/ItemBlockRenderTypes;getMovingBlockRenderType(Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/client/renderer/RenderType;"
+      },
+      "com/vinlanx/luxium/mixin/ChunkRenderDispatcherRebuildTaskMixin": {
+        "compile": "Lnet/minecraft/client/renderer/chunk/ChunkRenderDispatcher$RenderChunk$RebuildTask;compile(FFFLnet/minecraft/client/renderer/ChunkBufferBuilderPack;)Lnet/minecraft/client/renderer/chunk/ChunkRenderDispatcher$RenderChunk$RebuildTask$CompileResults;",
+        "net.minecraft.client.renderer.chunk.ChunkRenderDispatcher$RenderChunk$RebuildTask": "net/minecraft/client/renderer/chunk/ChunkRenderDispatcher$RenderChunk$RebuildTask"
+      }
+    }
+  }
+}

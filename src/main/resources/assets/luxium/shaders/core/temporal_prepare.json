@@ -1,0 +1,20 @@
+{
+  "blend": {
+    "func": "add",
+    "srcrgb": "one",
+    "dstrgb": "zero"
+  },
+  "vertex": "luxium:temporal_prepare",
+  "fragment": "luxium:temporal_prepare",
+  "attributes": [ "Position", "UV0" ],
+  "samplers": [
+    { "name": "SceneSampler" },
+    { "name": "SceneDepth" }
+  ],
+  "uniforms": [
+    { "name": "ModelViewMat", "type": "matrix4x4", "count": 16, "values": [1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1] },
+    { "name": "ProjMat", "type": "matrix4x4", "count": 16, "values": [1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1] },
+    { "name": "SourceTexelSize", "type": "float", "count": 2, "values": [0.001, 0.001] },
+    { "name": "LsrSharpness", "type": "float", "count": 1, "values": [0.35] }
+  ]
+}
